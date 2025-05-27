@@ -71,7 +71,7 @@ const productsData = [
 
 const ProductSection = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen py-12">
       {/* Header */}
       <div className="max-w-screen mx-auto mb-8 w-full px-10 py-8 bg-amber-600/10">
         <div className="flex items-center justify-between gap-4 flex-wrap">
