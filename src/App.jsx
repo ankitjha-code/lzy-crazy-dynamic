@@ -6,13 +6,13 @@ import ProductSection from "./components/ProductSection";
 import Banner from "./components/Banner";
 const App = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <Banner />
-      <ProductSection />
-      <About />
+    <>
       <Navbar></Navbar>
+      <Banner />
+      <About />
+      <ProductSection />
       <Footer></Footer>
-    </div>
+    </>
   );
 };
 

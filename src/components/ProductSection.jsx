@@ -73,7 +73,7 @@ const ProductSection = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       {/* Header */}
-      <div className="max-w-7xl mx-auto mb-8 w-full px-4 py-8 bg-amber-600/10">
+      <div className="max-w-screen mx-auto mb-8 w-full px-10 py-8 bg-amber-600/10">
         <div className="flex items-center justify-between gap-4 flex-wrap">
           <h1 className="text-4xl text-center flex-1 md:flex-none text-nowrap font-light tracking-wider text-amber-700 uppercase">
             Our Products
@@ -85,7 +85,7 @@ const ProductSection = () => {
       </div>
 
       {/* Products Grid */}
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-screen mx-auto px-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {productsData.map((product) => (
             <ProductCard key={product.id} product={product} />

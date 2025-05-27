@@ -15,7 +15,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex flex-1 justify-center space-x-8 text-2xl">
+        <ul className="hidden md:flex flex-1 justify-center space-x-16 text-xl">
           <li>
             <a href="#" className="font-semibold text-black">
               <strong>Home</strong>

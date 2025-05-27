@@ -2,12 +2,12 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="container mx-auto px-10 py-10 ">
+    <div className="container mx-16 px-4 py-10 ">
       <div className="flex flex-col-reverse md:flex-row items-center gap-10">
         {/* Left Side text section */}
         <div className="md:w-1/2 w-full text-center md:text-left">
-          <p className="text-lg font-semibold text-gray-600">We Provide</p>
-          <h1 className="text-3xl md:text-5xl font-bold mt-2 mb-4">
+          <p className="text-lg font-normal">We Provide</p>
+          <h1 className="text-3xl md:text-5xl font-semibold mt-2 mb-4">
             Welcome to Spa Center
           </h1>
           <p className="text-gray-500 mb-4">
