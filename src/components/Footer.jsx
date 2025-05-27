@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="">
       <div className="bg-neutral-900 text-white px-8 py-12">
-        <div className="max-w-screen mx-auto grid md:grid-cols-4 gap-10">
+        <div className="max-w-screen mx-4 grid md:grid-cols-4 gap-10">
           {/* Logo + Description + Social Icons */}
           <div>
             <img src="/logo.png" alt="Logo" className="mb-4 w-12" />
@@ -65,7 +65,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Strip */}
-      <div className="p-4 bg-neutral-700 text-sm flex flex-col md:flex-row justify-between items-center text-gray-100">
+      <div className="px-8 py-4 bg-neutral-700 text-sm flex flex-col md:flex-row justify-between items-center text-gray-100">
         <p>© Copyright Louisville Beauty Salon All rights reserved.</p>
         <div className="space-x-6 mt-2 md:mt-0">
           <a href="#" className="hover:text-white">

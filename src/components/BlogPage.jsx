@@ -125,7 +125,7 @@ export default function BlogPage() {
       </div>
 
       <section className="py-4 bg-white">
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="max-w-screen mx-8 px-4">
           <div className="mb-10 text-center">
             <p className="text-gray-500 text-lg">
               Lorem Ipsum is simply dummy text of the printing and typesetting
