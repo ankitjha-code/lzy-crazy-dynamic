@@ -3,9 +3,9 @@ import { Heart, ShoppingCart } from "lucide-react";
 
 const ProductCard = ({ product, showHover = false }) => {
   return (
-    <div className="group relative bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+    <div className="group relative bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
       {/* Hover Overlay with Buttons */}
-      <div className="absolute inset-0 bg-gray-800/70 bg-opacity-40 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 z-10">
+      <div className="absolute inset-0 bg-gray-800/70 bg-opacity-40 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 z-10">
         <button className="w-12 h-12 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all duration-200 shadow-lg">
           <Heart className="w-5 h-5 text-rose-400 fill-rose-400" />
         </button>
