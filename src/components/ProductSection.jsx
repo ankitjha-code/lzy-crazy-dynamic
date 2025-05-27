@@ -9,7 +9,7 @@ const productsData = [
     price: 56.0,
     rating: 4.5,
     image:
-      "https://images.unsplash.com/photo-1556228578-dd6e8005da31?w=300&h=300&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1653919198052-546d44e2458e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFjZSUyMHdhc2h8ZW58MHx8MHx8fDA%3D",
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ const productsData = [
     price: 56.0,
     rating: 4.0,
     image:
-      "https://images.unsplash.com/photo-1556228578-dd6e8005da31?w=300&h=300&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1653919198052-546d44e2458e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFjZSUyMHdhc2h8ZW58MHx8MHx8fDA%3D",
   },
   {
     id: 6,

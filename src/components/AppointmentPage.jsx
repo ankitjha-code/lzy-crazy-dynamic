@@ -21,7 +21,7 @@ export default function AppointmentPage() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('./src/Images/appointment.jpg')",
+          backgroundImage: "url('https://i.ibb.co/ksX2YDRr/appointment.jpg')",
           filter: "grayscale(90%)",
           backgroundSize: "cover",
           backgroundPosition: "center",

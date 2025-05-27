@@ -2,9 +2,9 @@ import React from "react";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 
 const images = [
-  "./src/Images/Mask Group (2).png",
-  "./src/Images/Mask Group (1).png",
-  "./src/Images/Mask Group.png",
+  "https://i.ibb.co/DgHw0XPK/Mask-Group-1.png",
+  "https://i.ibb.co/0y2Mcktn/Mask-Group-2.png",
+  "https://i.ibb.co/Jw7mQhGR/Mask-Group.png",
 ];
 
 const testimonials = [
@@ -103,7 +103,7 @@ export default function BlogPage() {
             <div className="lg:w-1/2 flex justify-center">
               <div className="w-[90%] h-[45%] rounded-full overflow-hidden">
                 <img
-                  src="./src/Images/1.jpg"
+                  src="https://i.ibb.co/pjvhDJdh/1.jpg"
                   alt="Special Offer"
                   className="w-full h-full object-cover"
                 />
