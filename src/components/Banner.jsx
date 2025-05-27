@@ -34,7 +34,7 @@ const Banner = () => {
   }, [slides.length]);
 
   return (
-    <div className="relative w-full h-[550px] overflow-hidden bg-gray-900">
+    <div className="relative w-full h-[350px] md:h-[450px] lg:h-[550px] overflow-hidden bg-gray-900">
       {/* Background overlay for darker appearance */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
       
@@ -56,11 +56,11 @@ const Banner = () => {
             <div className="z-20 w-full flex flex-col items-center justify-center text-center ">
               
               {/* Title */}
-              <h1 className="text-8xl font-bold text-white mb-12 -mt-28 relative z-30">{slide.title}</h1>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-6 sm:mb-8 md:mb-10 lg:mb-12 -mt-12 sm:-mt-16 md:-mt-20 lg:-mt-28 relative z-30">{slide.title}</h1>
               
               {/* Description - Styled to match the image */}
-              <div className="max-w-xl mx-auto bg-white/20 backdrop-blur-md py-4 px-6 rounded-4xl relative z-30">
-                <p className="text-white text-center text-lg leading-relaxed">{slide.description}</p>
+              <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl mx-auto bg-white/20 backdrop-blur-md py-3 px-4 sm:py-3 sm:px-5 md:py-4 md:px-6 rounded-xl sm:rounded-2xl md:rounded-3xl lg:rounded-4xl relative z-30">
+                <p className="text-white text-center text-sm sm:text-base md:text-lg leading-tight sm:leading-normal md:leading-relaxed">{slide.description}</p>
               </div>
             </div>
           </div>
