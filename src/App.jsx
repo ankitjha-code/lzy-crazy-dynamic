@@ -1,12 +1,11 @@
 import React from "react";
+import Banner from "./components/Banner";
 
 const App = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold">Welcome to Vite + React</h1>
-      <p className="mt-4 text-lg">
-        Get started by editing <code>src/App.jsx</code>
-      </p>
+    <div className="flex flex-col min-h-screen bg-gray-100">
+      <Banner />
+     
     </div>
   );
 };
