@@ -2,16 +2,15 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProductSection from "./components/ProductSection";
-
-
-
+import Banner from "./components/Banner";
 const App = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <Banner />
       <ProductSection />
     </div>
     <div>
-           <Navbar></Navbar>
+      <Navbar></Navbar>
       <Footer></Footer>
     </div>
   );
