@@ -23,7 +23,8 @@ export default function BlogPage() {
 
         // Fetch Special Offers
         const offersRes = await axios.post(import.meta.env.VITE_API_URL_OFFER, { userId });
-        if (Array.isArray(offersRes.data)) setSpecialOffers(offersRes.data);
+        if (Array.isArray(offersRes.data.specialOffers)) setSpecialOffers(offersRes.data.specialOffers);
+        console.log("Special Offers:", offersRes.data.specialOffers);
       } catch (error) {
         console.error("Error fetching data:", error);
         console.log("Blog API:", import.meta.env.VITE_API_URL_BLOG);
@@ -43,7 +44,7 @@ export default function BlogPage() {
           className="font-bold text-[2.7rem] md:text-[3.2rem] text-center tracking-wide"
           style={{ fontFamily: "'Old Standard TT', serif", color: "#B58152" }}
         >
-          Our Latest Blog
+          Our Latest Blog 
         </h1>
       </div>
 
@@ -72,7 +73,7 @@ export default function BlogPage() {
                 className="text-4xl md:text-5xl font-bold mb-4"
                 style={{ fontFamily: "'Old Standard TT', serif", color: "#B58152" }}
               >
-                Our Special Offers
+                Our Special Offers 
               </h2>
               <p className="text-[#3C3C3C] mb-8 leading-relaxed">
                 {specialOffers.length > 0 ? specialOffers[0].description : "Loading special offers..."}

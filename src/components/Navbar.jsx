@@ -25,7 +25,7 @@ const Navbar = () => {
           }
         );
 
-        console.log("Received header data from backend:", res.data);
+        // console.log("Received header data from backend:", res.data);
 
         if (res.status === 200) {
           setLogoUrl(res.data.logoUrl);
