@@ -17,11 +17,11 @@ const ProductCard = ({ product, showHover = false }) => {
       {/* Product Info */}
       <div className="p-6">
         <h3 className="text-xl font-semibold text-gray-800 mb-3">
-          {product.name}
+          {product.title}
         </h3>
-        <div className="mb-3">
+        {/* <div className="mb-3">
           <CardRatings rating={product.rating} />
-        </div>
+        </div> */}
         <p className="text-xl font-medium text-rose-400 mb-4">
           ${product.price.toFixed(2)}
         </p>
