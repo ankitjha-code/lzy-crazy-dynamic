@@ -17,7 +17,7 @@ const About = () => {
           }
         );
 
-        console.log("✅ About section data:", res.data);
+        // console.log("✅ About section data:", res.data);
         const data = res.data;
 
         if (Array.isArray(data) && data.length > 0) {

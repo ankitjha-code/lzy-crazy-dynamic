@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 export default function AppointmentPage() {
   const [form, setForm] = useState({
@@ -10,8 +11,16 @@ export default function AppointmentPage() {
   // Track which input is focused
   const [focused, setFocused] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const res = await axios.post(import.meta.env.VITE_API_URL_APPOINTMENT, {
+          userId: import.meta.env.VITE_API_USER_ID,
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          message: form.message,
+        });
+    console.log(res);
     alert("Appointment request submitted!");
     setForm({ name: "", email: "", phone: "", message: "" });
   };

@@ -143,58 +143,19 @@ const Footer = ({ user }) => {
   const [fetchLoading, setFetchLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Editing form states
-  const [address, setAddress] = useState("");
-  const [phone, setPhone] = useState("");
-  const [description, setDescription] = useState("");
-  const [socialIcons, setSocialIcons] = useState([]);
-  const [recentPosts, setRecentPosts] = useState([]);
-  const [dayTimes, setDayTimes] = useState([]);
-  const [selectedFile, setSelectedFile] = useState(null);
-
   // Fetch footer data from API
   const fetchFooterData = async () => {
     setFetchLoading(true);
     setError(null);
 
     try {
-      const response = await axios.post("http://localhost:4000/api/footer/test", { userId: import.meta.env.VITE_API_USER_ID });
+      const response = await axios.post("http://localhost:4000/api/footer/get", { userId: import.meta.env.VITE_API_USER_ID });
 
       if (response.data.success && response.data.footer) {
         const { footer } = response.data;
-        console.log(footer.data)
+        // Store the footer data
 
-        // Store the footer data for preview
         setFooterData(footer);
-
-        if (isEditing) {
-          // Set basic fields
-          setAddress(footer.address || "");
-          setPhone(footer.phone || "");
-          setDescription(footer.description || "");
-
-          // Set social icons if available
-          if (footer.socialIcons && footer.socialIcons.length > 0) {
-            setSocialIcons(footer.socialIcons);
-          }
-
-          // Set recent posts if available
-          if (footer.recentPosts && footer.recentPosts.length > 0) {
-            setRecentPosts(footer.recentPosts);
-          }
-
-          // Set day times if available
-          if (footer.dayTimes && footer.dayTimes.length > 0) {
-            setDayTimes(footer.dayTimes);
-          }
-
-          // Set logo if available
-          if (footer.logoUrl) {
-            setSelectedFile(footer.logoUrl);
-          }
-        }
-
-        toast.success("Footer data loaded successfully!");
       }
     } catch (err) {
       setError(err.message || "Error loading footer data");
@@ -210,28 +171,12 @@ const Footer = ({ user }) => {
     fetchFooterData();
   }, [isEditing]);
 
-  // Handlers for Edit and Delete buttons
-  const handleEditFooter = () => {
-    setIsEditing(true);
-  };
-
-  const handleDeleteFooter = () => {
-    setIsDeleting(true);
-    // Implement your delete logic here
-  };
 
   if (fetchLoading) return <p>Loading footer data...</p>;
   if (error) return <p className="text-red-600">{error}</p>;
 
   return (
-    <div className="bg-white rounded-xl border border-gray-200 shadow-md p-4 mb-8">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-bold text-gray-800"></h2>
-        
-      </div>
-
-      <div className="bg-gray-100 p-4 rounded-lg">
-        <div className="w-full flex flex-col md:flex-row flex-wrap gap-8 bg-gray-800 text-white p-6 rounded-lg">
+        <div className="w-full flex flex-col md:flex-row flex-wrap gap-8 bg-gray-800 text-white p-6">
           {/* Logo and company info */}
           <div className="w-full md:w-1/4">
             {footerData.logoUrl && (
@@ -326,8 +271,7 @@ const Footer = ({ user }) => {
             </div>
           )}
         </div>
-      </div>
-    </div>
+      
   );
 };
 

@@ -20,7 +20,7 @@ const ProductSection = () => {
           }
         );
 
-        console.log("✅ Product section data:", response.data);
+        // console.log("✅ Product section data:", response.data);
         setProducts(response.data);
       } catch (error) {
         console.error(error);
