@@ -1,15 +1,18 @@
 import { Star } from "lucide-react";
 
 const CardRatings = ({ rating }) => {
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = rating % 1 !== 0;
+  // Validate and clamp rating between 0 and 5
+  const safeRating = Math.min(Math.max(Number(rating) || 0, 0), 5);
+
+  const fullStars = Math.floor(safeRating);
+  const hasHalfStar = safeRating % 1 !== 0;
   const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
   return (
     <div className="flex items-center gap-1 mb-2">
       {/* Full Stars */}
       {[...Array(fullStars)].map((_, i) => (
-        <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+        <Star key={"full-" + i} className="w-4 h-4 fill-amber-400 text-amber-400" />
       ))}
 
       {/* Half Star */}
@@ -24,7 +27,7 @@ const CardRatings = ({ rating }) => {
 
       {/* Empty Stars */}
       {[...Array(emptyStars)].map((_, i) => (
-        <Star key={i} className="w-4 h-4 text-gray-300" />
+        <Star key={"empty-" + i} className="w-4 h-4 text-gray-300" />
       ))}
     </div>
   );
